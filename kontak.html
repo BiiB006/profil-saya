@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Form kontak dan saran untuk portal profil mahasiswa.">
+  <title>Kontak dan Saran | Habibie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Kontak dan Saran</h1>
+    <p>Kirim pesan, pertanyaan, atau masukan untuk portal ini.</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="index.html#profil">Profil</a></li>
+      <li><a href="index.html#portofolio">Portofolio</a></li>
+      <li><a href="kontak.html" aria-current="page">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+    <main>
+      <article>
+        <h2>Form kontak</h2>
+        <p>Kolom bertanda * wajib diisi.</p>
+
+        <form action="https://formspree.io/f/xjygpben" 
+        method="post">
+
+          <fieldset>
+            <legend>Data pengirim</legend>
+
+            <p>
+              <label for="nama">Nama lengkap *</label>
+              <input type="text" id="nama" name="nama" required minlength="3" maxlength="50" autocomplete="name" placeholder="Contoh: Prabowo Subianto">
+            </p>
+            <p>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="nama@gmail.com">
+            </p>
+            <p>
+              <label for="telepon">Nomor telepon</label>
+              <input type="tel" id="telepon" name="telepon" pattern="[0-9]{10,13}" title="Isi 10 sampai 13 angka, tanpa spasi atau tanda hubung" autocomplete="tel" placeholder="081234567890">
+            </p>
+            <p>
+              <label for="tanggal-lahir">Tanggal lahir</label>
+              <input type="date" id="tanggal-lahir" name="tanggal_lahir" min="1950-01-01" max="2012-12-31">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Pesan</legend>
+
+            <p>
+              <label for="kategori">Kategori *</label>
+              <select id="kategori" name="kategori" required>
+                <option value="">Pilih kategori</option>
+                <option value="pertanyaan">Pertanyaan</option>
+                <option value="saran">Saran</option>
+                <option value="kolaborasi">Ajakan kolaborasi</option>
+              </select>
+            </p>
+            <p>
+              <label for="nilai">Penilaian tampilan portal (1 sampai 10)</label>
+              <input type="range" id="nilai" name="nilai" min="1" max="10" value="5">
+            </p>
+            <p>
+              <label for="jumlah">Jumlah proyek yang ingin dilihat</label>
+              <input type="number" id="jumlah" name="jumlah" min="1" max="10" step="1" value="1">
+            </p>
+            <p>
+              <label for="warna">Warna favorit</label>
+              <input type="color" id="warna" name="warna" value="#0b6e6e">
+            </p>
+            <p>
+              <label for="pesan">Isi pesan *</label>
+              <textarea id="pesan" name="pesan" rows="5" required minlength="10" maxlength="500" placeholder="Tulis pesan kamu di sini (10 sampai 500 karakter)"></textarea>
+            </p>
+            <p class="check">
+              <input type="checkbox" id="setuju" name="setuju" required>
+              <label for="setuju">Saya setuju datanya digunakan untuk membalas pesan ini *</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Kirim pesan</button>
+            <button type="reset">Kosongkan form</button>
+          </p>
+        </form>
+      </article>
+
+      <article>
+        <h2>Kontak lainnya</h2>
+        <p>Kamu juga bisa menghubungi saya lewat <a href="mailto:habibie.rokhman@gmail.com">habibie.rokhman@gmail.com</a>.</p>
+      </article>
+    </main>
+
+    <aside aria-labelledby="judul-samping">
+      <h2 id="judul-samping">Waktu balasan</h2>
+      <p>Pesan dibalas dalam 1 sampai 2 hari kerja.</p>
+      <p><a href="index.html">Kembali ke beranda</a></p>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Habibie. Dibuat untuk tugas mata kuliah Pemrograman Web.</p>
+  </footer>
+</body>
+</html>
